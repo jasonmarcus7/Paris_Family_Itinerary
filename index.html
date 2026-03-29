@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paris — A Family Weekend · 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+SC:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --sand:        #6b6e45;
+  --sand-dark:   #6b6e45;
+  --sand-mid:    #5e6140;
+  --sand-light:  #888b60;
+  --gold:        #c9a84c;
+  --gold-light:  #e0c070;
+  --gold-pale:   #f0e0b0;
+  --cream:       #f5f0e8;
+  --cream-dark:  #ede7d8;
+  --white:       #ffffff;
+  --text:        #2a2d25;
+  --text-mid:    #4a4d42;
+  --text-light:  #7a7d70;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+a { color: var(--gold); }
+
+.cover {
+  background: var(--sand-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 48px;
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+}
+
+.logo-mark { width: 44px; height: 44px; }
+
+.cover-url {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+}
+
+.cover-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 48px;
+  text-align: center;
+}
+
+.cover-eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  opacity: 0.9;
+}
+
+.cover-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 72px;
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 6px;
+}
+
+.cover-title em { font-style: italic; color: var(--gold-light); }
+
+.cover-dates-line {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  margin: 20px 0 10px;
+}
+
+.cover-sub {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+}
+
+.cover-rule {
+  width: 60px; height: 1px;
+  background: var(--gold);
+  margin: 32px auto;
+  opacity: 0.5;
+}
+
+.cover-route {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+}
+
+.cover-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(201,168,76,0.15);
+  margin-top: auto;
+}
+
+.cover-stat {
+  padding: 32px 0;
+  text-align: center;
+  border-right: 1px solid rgba(201,168,76,0.15);
+}
+.cover-stat:last-child { border-right: none; }
+
+.cover-stat-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cover-stat-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: var(--gold-light);
+  display: block;
+  line-height: 1;
+}
+
+.cover-flight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 48px;
+  background: rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.flight-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: inline-block;
+}
+
+.cover-flight span {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+}
+
+.section-header {
+  text-align: center;
+  padding: 64px 48px 48px;
+  border-bottom: 1px solid rgba(74,82,64,0.15);
+}
+
+.section-header-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--sand-light);
+  margin-bottom: 12px;
+}
+
+.section-header-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+.day-wrap { padding: 0 48px; position: relative; }
+
+.day-entry {
+  display: grid;
+  grid-template-columns: 4px 1fr 80px;
+  gap: 0 28px;
+  padding: 52px 0;
+  border-bottom: 1px solid rgba(74,82,64,0.12);
+  position: relative;
+}
+
+.day-timeline { position: relative; }
+.day-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 8px; bottom: -52px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(201,168,76,0.4) 0%, rgba(201,168,76,0.05) 100%);
+}
+.day-entry:last-child .day-timeline::before { display: none; }
+.day-timeline::after {
+  content: '';
+  position: absolute;
+  left: -3px; top: 6px;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.day-number-col { text-align: right; padding-top: 0; }
+
+.day-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 80px;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  opacity: 0.7;
+}
+
+.day-dow {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  display: block;
+  text-align: right;
+  margin-top: 2px;
+}
+
+.day-date-str {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  text-align: right;
+  margin-top: 2px;
+}
+
+.day-destination {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 44px;
+  color: var(--text);
+  line-height: 1.05;
+  margin-bottom: 6px;
+}
+
+.day-region {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--text-light);
+  font-weight: 300;
+  margin-left: 8px;
+}
+
+.badge {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  background: var(--sand-light);
+  color: var(--white);
+}
+
+.badge.arrival      { background: #5a7060; }
+.badge.culture      { background: #6a4a5a; }
+.badge.adventure    { background: var(--sand-mid); }
+.badge.return-badge { background: var(--sand-mid); }
+
+.day-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.hotel-box {
+  border-left: 2px solid rgba(201,168,76,0.4);
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  background: rgba(74,82,64,0.04);
+}
+
+.hotel-name {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--sand-dark);
+  border-bottom: 1px solid rgba(201,168,76,0.4);
+  padding-bottom: 1px;
+  display: inline;
+}
+
+.hotel-meta {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  color: var(--text-light);
+  font-weight: 300;
+  margin-top: 3px;
+}
+
+.diet-tag {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 2px;
+  margin-left: 6px;
+  vertical-align: middle;
+  background: rgba(201,168,76,0.15);
+  color: var(--sand-mid);
+  border: 1px solid rgba(201,168,76,0.35);
+}
+
+.flight-box {
+  background: var(--sand-dark);
+  color: rgba(255,255,255,0.85);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.flight-box strong { font-weight: 500; color: var(--white); }
+
+.diet-note {
+  border-left: 2px solid var(--gold);
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: rgba(201,168,76,0.06);
+}
+
+.diet-note-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.diet-note-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+.activity-list { margin-top: 16px; list-style: none; }
+
+.activity-list li {
+  padding: 10px 0;
+  border-top: 1px solid rgba(74,82,64,0.1);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.act-num {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 1px;
+  flex-shrink: 0;
+  padding-top: 3px;
+  width: 36px;
+}
+
+.act-title {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.act-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+
+.highlight-box {
+  background: var(--sand-mid);
+  padding: 24px;
+  margin: 16px 0;
+  position: relative;
+}
+
+.highlight-box::before {
+  content: '◆';
+  font-size: 8px;
+  color: var(--gold);
+  margin-right: 8px;
+}
+
+.highlight-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 8px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.8;
+  display: inline;
+}
+
+.highlight-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--white);
+  margin: 8px 0 10px;
+  line-height: 1.2;
+}
+
+.highlight-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65;
+}
+
+.summary-page {
+  background: var(--sand-dark);
+  padding: 64px 48px;
+  color: var(--white);
+}
+
+.summary-page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.summary-page-sub {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 48px;
+  opacity: 0.8;
+}
+
+.summary-row {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 0 24px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  align-items: start;
+}
+
+.summary-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.6;
+  line-height: 1;
+  text-align: right;
+}
+
+.summary-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 4px;
+  font-weight: 300;
+}
+
+.summary-value {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gold-light);
+}
+
+.summary-note {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.site-footer {
+  background: var(--sand-dark);
+  border-top: 1px solid rgba(201,168,76,0.15);
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+
+@media (max-width: 640px) {
+  .day-entry { grid-template-columns: 4px 1fr; }
+  .day-number-col { display: none; }
+  .cover-title { font-size: 48px; }
+  .cover-stats { grid-template-columns: repeat(2,1fr); }
+  .day-wrap { padding: 0 20px; }
+  .cover-top, .site-footer { padding: 20px; }
+  .section-header { padding: 40px 20px 32px; }
+  .summary-page { padding: 40px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════ COVER ══════════ -->
+<div class="cover">
+  <div class="cover-top">
+    <svg class="logo-mark" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <rect width="44" height="44" fill="#6b6e45" rx="4"/>
+      <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0c070"/><stop offset="100%" stop-color="#a07830"/></linearGradient></defs>
+      <line x1="22" y1="7" x2="22" y2="37" stroke="url(#g1)" stroke-width="1.5"/>
+      <line x1="22" y1="7" x2="14" y2="28" stroke="url(#g1)" stroke-width="1.5"/>
+      <line x1="22" y1="7" x2="30" y2="28" stroke="url(#g1)" stroke-width="1.5"/>
+      <line x1="13" y1="22" x2="31" y2="22" stroke="url(#g1)" stroke-width="1"/>
+      <line x1="11" y1="28" x2="33" y2="28" stroke="url(#g1)" stroke-width="1"/>
+      <line x1="11" y1="28" x2="8" y2="37" stroke="url(#g1)" stroke-width="1.5"/>
+      <line x1="33" y1="28" x2="36" y2="37" stroke="url(#g1)" stroke-width="1.5"/>
+    </svg>
+    <span class="cover-url">Paris · Family Weekend</span>
+  </div>
+
+  <div class="cover-hero">
+    <p class="cover-eyebrow">Private Itinerary · 2 Adults · 2 Children · Gluten &amp; Dairy Free</p>
+    <h1 class="cover-title">Paris &amp;<br><em>The Seine</em></h1>
+    <p class="cover-dates-line">Sunday – Wednesday &nbsp;·&nbsp; A Family City Escape</p>
+    <p class="cover-sub">Arrival 10h45 Sunday · Departure 12h30 Wednesday</p>
+    <div class="cover-rule"></div>
+    <p class="cover-route">Marais &amp; Atelier des Lumières &nbsp;›&nbsp; Louvre &amp; Tour Eiffel &nbsp;›&nbsp; Versailles, Trianon &amp; Notre-Dame &nbsp;›&nbsp; Montmartre</p>
+  </div>
+
+  <div class="cover-stats">
+    <div class="cover-stat">
+      <span class="cover-stat-label">Nights</span>
+      <span class="cover-stat-value">3</span>
+    </div>
+    <div class="cover-stat">
+      <span class="cover-stat-label">Travellers</span>
+      <span class="cover-stat-value">4</span>
+    </div>
+    <div class="cover-stat">
+      <span class="cover-stat-label">Ages</span>
+      <span class="cover-stat-value" style="font-size:20px;line-height:1.3;padding-top:6px">8 &amp; 10</span>
+    </div>
+    <div class="cover-stat">
+      <span class="cover-stat-label">GF · DF</span>
+      <span class="cover-stat-value" style="font-size:18px;line-height:1.3;padding-top:4px">All Days</span>
+    </div>
+  </div>
+
+  <div class="cover-flight">
+    <span class="flight-dot"></span>
+    <span>Louvre 12h30 Monday &nbsp;·&nbsp; Versailles arrive 11h00 · Trianon 12h00 · Palace 14h00 Tuesday &nbsp;·&nbsp; Departure 12h30 Wednesday</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ DAY BY DAY ══════ -->
+<div class="section-header">
+  <p class="section-header-label">Itinerary</p>
+  <p class="section-header-title">Day by Day</p>
+</div>
+
+<div class="day-wrap">
+
+  <!-- ─── DAY 1: SUNDAY ─── -->
+  <div class="day-entry">
+    <div class="day-timeline"></div>
+    <div class="day-body-col">
+      <h2 class="day-destination">Arrival &amp; <span class="day-region">Le Marais</span></h2>
+      <div class="badge arrival">Arrival · Coffee · Discovery</div>
+
+      <div class="flight-box">
+        <strong>Arrival:</strong> Paris · 10h45 &nbsp;·&nbsp; Transfer to hotel — luggage storage available if room not yet ready
+      </div>
+
+      <div class="diet-note">
+        <span class="diet-note-label">Gluten Free · Dairy Free · Every Day</span>
+        <span class="diet-note-text">All restaurant and café recommendations throughout this itinerary are either 100% dedicated gluten-free and dairy-free establishments, or venues widely verified as safe. GF · DF tags appear on each entry. Always confirm your requirements when booking.</span>
+      </div>
+
+      <ul class="activity-list">
+        <li>
+          <span class="act-num">10h45</span>
+          <div>
+            <span class="act-title">Arrival in Paris</span>
+            <span class="act-desc">Transfer to hotel in the Marais or 11th arrondissement — the ideal base for all four days. Drop bags and take stock of the neighbourhood before heading out.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">12h00</span>
+          <div>
+            <span class="act-title">Lunch — Noglu, Passage des Panoramas (2nd) <span class="diet-tag">GF · DF</span></span>
+            <span class="act-desc">One of Paris's most celebrated 100% gluten-free café-bakeries, Noglu has been a veteran of the Paris GF scene for over ten years. Their GF ham and cheese baguette is exceptional, the pistachio eclair extraordinary. Pain au chocolat, croissants, avocado toast, and hot sandwiches round out a brilliant lunch. Dairy-free options clearly marked. Arrive early or book ahead — the reputation is well earned.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">14h00</span>
+          <div>
+            <span class="act-title">Place des Vosges &amp; Marais Wander</span>
+            <span class="act-desc">Paris's oldest and most beautiful square — arcaded Renaissance walkways, sandstone façades, and a garden where the children can run. From here, wander the medieval lanes of the Marais at a Sunday pace — past galleries, boutiques, and hidden courtyards leading toward the 11th.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">15h00</span>
+          <div>
+            <span class="act-title">Maison Plume — Afternoon Pastry <span class="diet-tag">GF · DF</span></span>
+            <span class="act-desc">A stunning patisserie in Le Marais where every pastry is gluten-free, dairy-free, and refined sugar-free. The signature feather-shaped plume pastries are filled with luscious cream and are among the most beautiful GF patisserie in Paris. A worthy and rather delicious afternoon stop.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">16h30</span>
+          <div>
+            <span class="act-title">Atelier des Lumières — Immersive Art</span>
+            <span class="act-desc">A former iron foundry transformed into Europe's largest digital art centre — floor-to-ceiling projections of Monet, Klimt, or Van Gogh filling every surface including the floor. One of the most genuinely awe-inspiring experiences in Paris for all ages. The children will be completely transfixed. Book tickets in advance online.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">19h30</span>
+          <div>
+            <span class="act-title">Dinner — Aujourd'hui Demain, 11th Arrondissement <span class="diet-tag">GF · DF</span></span>
+            <span class="act-desc">A stylish concept café-restaurant in the 11th where everything is 100% plant-based and entirely gluten-free — all made from scratch including plant milks and GF breads. A bright, minimalist interior with reclaimed wood and abundant greenery, welcoming and relaxed for families. One of the most acclaimed fully GF/DF dining experiences in Paris.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="hotel-box">
+        <span class="hotel-name">Recommended Stay — Marais or 11th arrondissement boutique hotel</span>
+        <div class="hotel-meta">Central location · Walking distance to all Sunday and Monday activities · Easy RER C access for Versailles on Tuesday</div>
+      </div>
+    </div>
+    <div class="day-number-col">
+      <span class="day-num">1</span>
+      <span class="day-dow">Sun</span>
+      <span class="day-date-str">Arrival</span>
+    </div>
+  </div>
+
+  <!-- ─── DAY 2: MONDAY ─── -->
+  <div class="day-entry">
+    <div class="day-timeline"></div>
+    <div class="day-body-col">
+      <h2 class="day-destination">Louvre <span class="day-region">&amp; Tour Eiffel</span></h2>
+      <div class="badge culture">Art · Icons · River</div>
+
+      <ul class="activity-list">
+        <li>
+          <span class="act-num">09h00</span>
+          <div>
+            <span class="act-title">Breakfast — Noglu, Rue Basfroi (11th) or Rue de Grenelle (7th) <span class="diet-tag">GF · DF</span></span>
+            <span class="act-desc">Noglu's 11th arrondissement location on Rue Basfroi opens from 08h30 and is ideal if staying in the Marais. Avocado toast, the famous egg sandwich, croissants, and Buddha bowls for breakfast. The 7th arrondissement location on Rue de Grenelle is equally cosy and convenient for the Eiffel Tower end of the day.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">10h00</span>
+          <div>
+            <span class="act-title">Jardin des Tuileries — Morning Stroll</span>
+            <span class="act-desc">A gentle walk through the formal gardens linking the Louvre to Place de la Concorde. The central round ponds have toy boat rentals from mid-morning — a quintessential Parisian pleasure for young children and a calm start to the day before the museum.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">11h30</span>
+          <div>
+            <span class="act-title">Coffee — Télescope, Rue Villedo (1st) <span class="diet-tag">GF · DF</span></span>
+            <span class="act-desc">Five minutes from the Louvre, one of Paris's benchmark specialty coffee shops — minimalist, serious, beloved by the city's coffee cognoscenti. Black coffees and dairy-free milks available. A perfect pre-Louvre pause.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">12h30</span>
+          <div>
+            <span class="act-title">The Louvre — Timed Entry ✦ Confirmed</span>
+            <span class="act-desc">With curious children aged 8 and 10, focus rather than exhaust: the Egyptian Antiquities rooms are extraordinary — mummies, sarcophagi, hieroglyphs. Then the Winged Victory of Samothrace on the grand staircase. Collect a free family trail booklet at the information desk. Allow 2 to 2.5 hours.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">15h00</span>
+          <div>
+            <span class="act-title">Late Lunch — CoCoCo, near Palais Royal (1st) <span class="diet-tag">GF · DF</span></span>
+            <span class="act-desc">An exceptional find near the Palais Royal — a Japanese-style bento box lunch restaurant that is 100% gluten-free, organic, and lactose-free, all homemade. The bento format is great fun for children — a generous box with rice, pickled vegetables, a main, and various accompaniments. The Japanese beef curry and the karaagé fried chicken are standout mains. Lunch only; book ahead.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">16h30</span>
+          <div>
+            <span class="act-title">Tour Eiffel — Timed Climb ✦ Must See</span>
+            <span class="act-desc">Book timed entry tickets in advance — the queues for walk-ins are substantial. The second floor at 115m gives extraordinary panoramic views and is accessible by lift; the summit at 276m is exhilarating for older children. Allow 1.5 hours. The experience of Paris laid out below, in every direction, is one the children will carry for years.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">18h30</span>
+          <div>
+            <span class="act-title">Champ de Mars — Evening &amp; Light Show</span>
+            <span class="act-desc">Settle on the Champ de Mars lawn as Paris settles into evening. The tower's famous five-minute sparkling light show begins on the hour after dark — the children will insist on watching it more than once. A naturally gluten-free and dairy-free moment: a Berthillon sorbet or street crêpe (check ingredients) in hand.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">20h00</span>
+          <div>
+            <span class="act-title">Dinner — Wild &amp; the Moon, 1st or 8th Arrondissement <span class="diet-tag">GF · DF</span></span>
+            <span class="act-desc">A celebrated Parisian chain of modern plant-based eateries — all food 100% gluten-free, dairy-free, organic, and vegan. Superbowls, salads, soups, bahn mi, and baked goods with genuine flavour. Several central locations; the 1st or 8th work perfectly for a post-Eiffel dinner. Casual, fast, and genuinely very good.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="highlight-box">
+        <span class="highlight-label">Highlight Experience</span>
+        <div class="highlight-title">The Tour Eiffel at Dusk</div>
+        <p class="highlight-text">Book the late afternoon slot deliberately. Ascending as the sun sets over Paris — the Seine catching the last light, the Sacré-Cœur glowing on the hill to the north, the city extending to every horizon — is one of the great travel experiences. Descending to watch the sparkling light show from the Champ de Mars grass, the tower illuminated above, is the kind of memory that lasts a lifetime.</p>
+      </div>
+    </div>
+    <div class="day-number-col">
+      <span class="day-num">2</span>
+      <span class="day-dow">Mon</span>
+      <span class="day-date-str">Louvre</span>
+    </div>
+  </div>
+
+  <!-- ─── DAY 3: TUESDAY ─── -->
+  <div class="day-entry">
+    <div class="day-timeline"></div>
+    <div class="day-body-col">
+      <h2 class="day-destination">Versailles <span class="day-region">Trianon · Notre-Dame</span></h2>
+      <div class="badge adventure">Palace · Hamlet · Cathedral</div>
+
+      <ul class="activity-list">
+        <li>
+          <span class="act-num">08h30</span>
+          <div>
+            <span class="act-title">Breakfast — Judy Café <span class="diet-tag">GF · DF</span></span>
+            <span class="act-desc">Judy is a fully gluten-free café owned by an Australian naturopath, with three central Paris locations. All-day brunch menu: GF/DF pancakes, avocado toast, eggs, banana bread, and excellent coffee with dairy-free milk options. A grounding and nourishing start before the longest day of the trip. Take a GF pastry to go for the train if time is short.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">09h15</span>
+          <div>
+            <span class="act-title">RER C from Rive Gauche — to Versailles Château</span>
+            <span class="act-desc">Board the RER C from any Left Bank station — Saint-Michel Notre-Dame, Musée d'Orsay, or Invalides — direct to Versailles Château Rive Gauche. Approximately 35 to 40 minutes. Note this same line and station for the return journey, which passes directly past the Île de la Cité and Notre-Dame.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">11h00</span>
+          <div>
+            <span class="act-title">Arrive Versailles — Walk Through the Gardens to Trianon</span>
+            <span class="act-desc">Enter through the main Palace gates and walk directly into the grand formal gardens. Head westward through the gardens toward the Trianon domain — the Grand Canal stretches to the left, the formal parterres extend on all sides, the scale is extraordinary. Allow 30 minutes at a leisurely pace — the walk itself is one of the finest in France.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">12h00</span>
+          <div>
+            <span class="act-title">Trianon Estate Opens — Grand Trianon &amp; Petit Trianon</span>
+            <span class="act-desc">The entire Trianon domain opens at 12h00. Enter directly from the gardens path. Explore the Grand Trianon — Louis XIV's intimate pink marble retreat, filled with light and remarkable furniture — then the Petit Trianon, the neoclassical gem built for Louis XV and most famously associated with Marie-Antoinette. Access to the Hamlet is via the Petit Trianon gate.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">13h00</span>
+          <div>
+            <span class="act-title">The Queen's Hamlet — Marie-Antoinette's Fairytale Village</span>
+            <span class="act-desc">A hamlet of thatched Norman cottages around a still lake — with a working farm and animals, a dovecote, a mill, and winding paths through the most enchanting corner of the entire Versailles estate. For children aged 8 and 10 this is the undisputed highlight of the day. Allow a full, unhurried hour. The afternoon quiet here is extraordinary.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">13h45</span>
+          <div>
+            <span class="act-title">Petit Train — Trianon back to the Palace</span>
+            <span class="act-desc">Board the petit train from the Grand Trianon stop for the return to the Palace — approximately 15 to 20 minutes. This gives a comfortable buffer before the 14h00 Palace entry. The children will love the train as much as anything else in Versailles.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">14h00</span>
+          <div>
+            <span class="act-title">Palace of Versailles — Timed Entry ✦ Confirmed</span>
+            <span class="act-desc">Enter through the main Cour d'Honneur and proceed through the King's State Apartments to the Hall of Mirrors — 73 metres of gilded arches, painted ceilings, and 357 mirrors overlooking the gardens. One of the great rooms of Europe. The children's audio guide is excellent and available at the information desk. Allow 2 hours. Note: no food service inside the Palace — ensure everyone is well fed beforehand.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">16h15</span>
+          <div>
+            <span class="act-title">RER C Return — Alight at Notre-Dame</span>
+            <span class="act-desc">Board the RER C from Versailles Château Rive Gauche toward Paris and alight at Saint-Michel Notre-Dame. The journey is approximately 40 minutes. Notre-Dame de Paris reopened in December 2024 after five years of restoration following the 2019 fire — the restored interior is by all accounts extraordinary and deeply moving. Allow 45 minutes to walk around the exterior and visit the nave.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">17h30</span>
+          <div>
+            <span class="act-title">Île Saint-Louis — Evening Stroll &amp; Berthillon</span>
+            <span class="act-desc">Cross from Notre-Dame onto the Île Saint-Louis — one of the most unchanged streets in Paris. Berthillon, the legendary glacier, is here. Their sorbets are fruit-based and naturally dairy-free — flavours change seasonally. A perfect way to close a very full and wonderful day before the short journey back to the hotel.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">19h30</span>
+          <div>
+            <span class="act-title">Dinner — Kapunka Thai, multiple locations <span class="diet-tag">GF · DF</span></span>
+            <span class="act-desc">A fully gluten-free Thai restaurant group with three Paris locations — widely praised as one of the finest GF/DF dining options in the city. Pad thai, curries, chicken satay, all cooked in a dedicated gluten-free kitchen. The Khao-Soy red curry and the pad thai are particular highlights. Generous portions, outstanding flavour, and great fun for children. Book ahead — popular and intimate in size.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="highlight-box">
+        <span class="highlight-label">Highlight Experience</span>
+        <div class="highlight-title">The Queen's Hamlet &amp; Notre-Dame</div>
+        <p class="highlight-text">Two of the most quietly profound places in France, in a single day. The Hamlet at Versailles — a village of thatched cottages and a working farm built by a queen who wanted to feel human again — followed by Notre-Dame, newly risen and more luminous than before the fire. For two curious children, this day will generate more questions than any other. Answer them slowly, and carry the conversation into dinner.</p>
+      </div>
+    </div>
+    <div class="day-number-col">
+      <span class="day-num">3</span>
+      <span class="day-dow">Tue</span>
+      <span class="day-date-str">Versailles</span>
+    </div>
+  </div>
+
+  <!-- ─── DAY 4: WEDNESDAY ─── -->
+  <div class="day-entry">
+    <div class="day-timeline"></div>
+    <div class="day-body-col">
+      <h2 class="day-destination">Montmartre <span class="day-region">&amp; Departure</span></h2>
+      <div class="badge return-badge">Morning · Departure 12h30</div>
+
+      <ul class="activity-list">
+        <li>
+          <span class="act-num">08h00</span>
+          <div>
+            <span class="act-title">Breakfast — Café Mareva, Montmartre (18th) <span class="diet-tag">GF · DF</span></span>
+            <span class="act-desc">A completely gluten-free café a few blocks from Sacré-Cœur, serving sweet and savoury waffles made from scratch, pancakes, poke bowls, and loaded toasts on homemade GF bread. Their sweet potato waffles — topped with guacamole, eggs, bacon, or maple syrup — are famous in the Paris GF community. Dairy-free milk available. Open from 09h00; arrive early for the best selection.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">09h15</span>
+          <div>
+            <span class="act-title">Sacré-Cœur &amp; the Village of Montmartre</span>
+            <span class="act-desc">Climb the steps to Sacré-Cœur early, before the crowds gather — the view over Paris from the forecourt is one of the finest in the city, the white dome brilliant in the morning light. Then descend through the village lanes: the old vineyard, the traditional windmills, the Place du Tertre where artists have painted since the days of Picasso, Utrillo, and Modigliani.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">10h30</span>
+          <div>
+            <span class="act-title">Musée de Montmartre — Renoir's Studio</span>
+            <span class="act-desc">A small, beautiful museum in the oldest house on the Butte — Renoir's former studio, with terraced gardens overlooking the vineyard. The children can stand in the room where some of the most recognised paintings in the world were made. Creative, intimate, and perfectly suited to curious 8 and 10 year olds. Allow 45 minutes.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">11h30</span>
+          <div>
+            <span class="act-title">Hotel Checkout &amp; Transfer</span>
+            <span class="act-desc">Collect bags from the hotel — most will hold them from the morning — and transfer to the departure point with time to spare for 12h30. A final sorbet or pastry from Copains Bakery (Marais branch, fully GF/DF) en route if time and appetite allow.</span>
+          </div>
+        </li>
+        <li>
+          <span class="act-num">12h30</span>
+          <div>
+            <span class="act-title">Departure</span>
+            <span class="act-desc">Three nights, four unforgettable neighbourhoods, two palaces, one cathedral, one iron tower, and a great many exceptional coffees. <em>À bientôt, Paris.</em></span>
+          </div>
+        </li>
+      </ul>
+
+      <p class="day-text">Paris rewards the curious — and two children aged 8 and 10 are among the finest travelling companions this city could hope for. Take it at their pace, follow their questions, and let the city do the rest.</p>
+    </div>
+    <div class="day-number-col">
+      <span class="day-num">4</span>
+      <span class="day-dow">Wed</span>
+      <span class="day-date-str">Departure</span>
+    </div>
+  </div>
+
+</div><!-- /day-wrap -->
+
+
+<!-- ══════════════════════════════════ TRIP SUMMARY ══════════ -->
+<div class="summary-page">
+  <p class="summary-page-sub">Overview</p>
+  <h2 class="summary-page-title">Trip Summary</h2>
+
+  <div class="summary-row">
+    <span class="summary-num">1</span>
+    <div>
+      <div class="summary-label">Duration</div>
+      <div class="summary-value">3 Nights · Sunday Arrival 10h45 – Wednesday Departure 12h30</div>
+      <div class="summary-note">4 days · Marais · Louvre &amp; Tour Eiffel · Versailles, Trianon &amp; Notre-Dame · Montmartre</div>
+    </div>
+  </div>
+
+  <div class="summary-row">
+    <span class="summary-num">2</span>
+    <div>
+      <div class="summary-label">Confirmed Appointments</div>
+      <div class="summary-value">Louvre — Monday 12h30 &nbsp;·&nbsp; Palace of Versailles — Tuesday 14h00</div>
+      <div class="summary-note">Tuesday: arrive 11h00 → walk gardens → Trianon opens 12h00 → Hamlet → petit train → Palace 14h00 (30 min grace period)</div>
+    </div>
+  </div>
+
+  <div class="summary-row">
+    <span class="summary-num">3</span>
+    <div>
+      <div class="summary-label">Gluten Free · Dairy Free Venues</div>
+      <div class="summary-value">Noglu · Maison Plume · CoCoCo · Aujourd'hui Demain · Judy · Wild &amp; the Moon · Kapunka · Café Mareva · Berthillon sorbets</div>
+      <div class="summary-note">All 100% GF/DF dedicated or widely verified safe · Always confirm your requirements at the time of booking</div>
+    </div>
+  </div>
+
+  <div class="summary-row">
+    <span class="summary-num">4</span>
+    <div>
+      <div class="summary-label">For the Children</div>
+      <div class="summary-value">Atelier des Lumières · Louvre Egyptian Rooms · Tour Eiffel · Queen's Hamlet · Notre-Dame · Montmartre Village</div>
+      <div class="summary-note">Ages 8 &amp; 10 · Curious, active, and ready for Paris</div>
+    </div>
+  </div>
+
+  <div class="summary-row">
+    <span class="summary-num">5</span>
+    <div>
+      <div class="summary-label">Specialty Coffee · GF · DF</div>
+      <div class="summary-value">Noglu (multiple locations) · Télescope (1st) · Café Mareva (Montmartre) · Judy (multiple locations)</div>
+      <div class="summary-note">All serve excellent espresso · Noglu, Judy and Café Mareva are fully dedicated GF/DF establishments</div>
+    </div>
+  </div>
+
+  <div class="summary-row">
+    <span class="summary-num">6</span>
+    <div>
+      <div class="summary-label">Key Bookings to Make</div>
+      <div class="summary-value">Atelier des Lumières · Tour Eiffel timed entry · CoCoCo · Kapunka · Musée de Montmartre</div>
+      <div class="summary-note">Book timed entries and popular restaurants well in advance · Versailles Passport ticket covers Palace, Trianon, gardens &amp; petit train</div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ══════════════════════════════════ FOOTER ══════════ -->
+<div class="site-footer">
+  <span class="footer-brand">Paris Family Weekend · Gluten Free &amp; Dairy Free Throughout</span>
+  <svg width="28" height="28" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" style="opacity:0.3">
+    <defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0c070"/><stop offset="100%" stop-color="#a07830"/></linearGradient></defs>
+    <line x1="22" y1="7" x2="22" y2="37" stroke="url(#g4)" stroke-width="1.5"/>
+    <line x1="22" y1="7" x2="14" y2="28" stroke="url(#g4)" stroke-width="1.5"/>
+    <line x1="22" y1="7" x2="30" y2="28" stroke="url(#g4)" stroke-width="1.5"/>
+    <line x1="13" y1="22" x2="31" y2="22" stroke="url(#g4)" stroke-width="1"/>
+    <line x1="11" y1="28" x2="33" y2="28" stroke="url(#g4)" stroke-width="1"/>
+    <line x1="11" y1="28" x2="8" y2="37" stroke="url(#g4)" stroke-width="1.5"/>
+    <line x1="33" y1="28" x2="36" y2="37" stroke="url(#g4)" stroke-width="1.5"/>
+  </svg>
+</div>
+
+</body>
+</html>
